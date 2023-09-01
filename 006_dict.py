@@ -1,3 +1,4 @@
+# 创建一个字典 d = {key:value,...}
 d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 print(d['Michael'])
 
