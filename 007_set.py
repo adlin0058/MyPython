@@ -23,5 +23,16 @@
 # print(s1 | s2)
 
 # 将两个可变对象放入set
-s = ([1, 2, 3], [4, 5, 6], [1, 2, 3])
-print(s)
+# s = ([1, 2, 3], [4, 5, 6], [1, 2, 3])
+# print(s)
+
+thisset = set(('Google', 'Runoob', 'Taobao'))
+thisset.add('Facebook')
+print(thisset)
+
+thisset.update({1, 3})
+print(thisset)
+thisset.update([1, 4], [5, 6])
+print(thisset)
+thisset.clear()
+print(thisset)
