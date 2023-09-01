@@ -56,45 +56,48 @@
 # print(power(5, 4))
 
 # todo 学生注册
-# def enroll(name, gender, age=6, city='Shanghai'):
-#     print('name:', name)
-#     print('gender:', gender)
-#     print('age:', age)
-#     print('city:', city)
-#     print('---------------')
+def enroll(name, gender, age=6, city='Shanghai'):
+    print('name:', name)
+    print('gender:', gender)
+    print('age:', age)
+    print('city:', city)
+    print('---------------')
 
 
-# enroll('Michael', 'M')
-# enroll('Anay', 'F', city='America')
+enroll('Michael', 'M')
+enroll('Anay', 'F', city='America')
 
 #! 默认参数易错
-# # def add_end(L=[]):
-# #     L.append('END')
-# #     return L
-
-# def add_end(L=None):
-#     if L is None:
-#         L = []
+# def add_end(L=[]):
 #     L.append('END')
 #     return L
 
 
-# print(add_end())
-# print(add_end())
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+
+
+print(add_end())
+print(add_end())
 
 #! 可变参数
 # todo 给定一组数字a，b，c……，请计算a^2 + b^2 + c^2 + ……
-# def calc(*numbers):
-#     sum = 0
-#     for n in numbers:
-#         sum = sum + n**2
-#     return sum
 
 
-# print(calc())
-# print(calc(1, 2, 3, 4))
-# nums = [1, 2, 4, 5, 6]
-# print(calc(*nums))
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n**2
+    return sum
+
+
+print(calc())
+print(calc(1, 2, 3, 4))
+nums = [1, 2, 4, 5, 6]
+print(calc(*nums))
 
 
 #! 关键字参数 **kw
