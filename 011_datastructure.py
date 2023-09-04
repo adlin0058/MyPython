@@ -54,11 +54,11 @@
 # rst2 = [str(round(355/113, i)) for i in range(1, 6)]
 # print(rst2)
 
-matrix = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-]
+# matrix = [
+#     [1, 2, 3, 4],
+#     [5, 6, 7, 8],
+#     [9, 10, 11, 12],
+# ]
 # rst3 = [[row[i] for row in matrix] for i in range(4)]
 # print(rst3)
 
