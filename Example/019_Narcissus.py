@@ -13,7 +13,7 @@
 #     else:
 #         print( '%d 不是水仙花数' % n)
 
-#! 任意为数
+#! 任意位数
 def isNarrcissus(num):
     n = num
     l = len(str(n))
@@ -27,4 +27,4 @@ def isNarrcissus(num):
         print('no')
 
 
-isNarrcissus(407)
+isNarrcissus(int(input('请输入一个数字：')))
