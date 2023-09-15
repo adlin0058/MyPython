@@ -13,20 +13,28 @@ i = 1
 cnt = 0
 # 用于计数下船几个
 n = 0
+
+# 反复遍历字典1-30
 while i <= 31:
     if i == 31:
         i = 1
-
+    # 如果i对应的value是0，说明、i号已下船，直接下一个
     if people[i] == 0:
         i += 1
         continue
+    # 如果不是0，那就使cnt加一，cnt是几，当前报的数就是几
     elif people[i] == 1:
         cnt += 1
+        # 报数是9时，下船
         if cnt == 9:
+            # 标记下船
             people[i] = 0
             print(i, '下船')
+            # 报数归零，下一个报的数就是1
             cnt = 0
+            # n计数下了几个人
             n += 1
         i += 1
+    # 下15个人时退出
     if n == 15:
         break
