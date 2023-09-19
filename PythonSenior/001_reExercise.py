@@ -6,11 +6,11 @@
     bill.gates@microsoft.com
  """
 import re
-re_email = re.compile(r'^(\w+)@(\w+)\.(\w+)$')
+re_email = re.compile(r'^(\w+)([\.\-\+]\w+)*@(\w+)\.(\w+)$')
 
 
 def is_valid_email(addr):
-    if re_email.match('addr'):
+    if re_email.match(addr):
         print('yes')
     else:
         print('no')
