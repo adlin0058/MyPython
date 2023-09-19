@@ -28,13 +28,14 @@ is_valid_email('mr-bob@example.com')
     bob@example.com => bob
 
  """
-re_name = re.compile(r'^(.*?)(?:(<.*?>))?\s*(.*?)@(\w+)(\.\w+)+')
+re_name = re.compile(r'^(<.*?>)?(.*?)?\s*(.*?)@(\w+)(\.\w+)+')
 
 
 def name_of_email(addr):
     n = re_name.match(addr)
+    print(n.groups())
     if n is None:
-        return None
+        return 'a'
     if n.group(1):
         return n.group(1)
     if n.group(2):
