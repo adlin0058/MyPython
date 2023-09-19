@@ -22,22 +22,17 @@
 # nums = list(s)
 # print(nums)
 
-nums = [0, 0, 1, 1, 1, 1, 2, 3, 3]
+nums = [1, 1, 1, 2, 2, 3]
 """ 
 0 1 1 2
 """
 print(nums)
-a, b = 0, 1
-f = False
-while b < len(nums):
-    if nums[a] == nums[b]:
-        if f == True:
-            nums.pop(b)
-        b += 1
-        f = True
-    else:
-        a += 1
-        b += 1
-        f = False
+slow = 0
+for fast in range(len(nums)):
+    if slow < 2 or nums[slow-2] != nums[fast]:
+        nums[slow] = nums[fast]
+        slow += 1
+
+print(slow)
 
 print(nums)
