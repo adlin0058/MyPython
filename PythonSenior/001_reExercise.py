@@ -6,20 +6,20 @@
     bill.gates@microsoft.com
 """
 import re
-re_email = re.compile(r'^(\w+)([\.\-\+]\w+)*@(\w+)(\.\w+)+$')
+# re_email = re.compile(r'^(\w+)([\.\-\+]\w+)*@(\w+)(\.\w+)+$')
 
 
-def is_valid_email(addr):
-    if re_email.match(addr):
-        print('yes')
-    else:
-        print('no')
+# def is_valid_email(addr):
+#     if re_email.match(addr):
+#         print('yes')
+#     else:
+#         print('no')
 
 
-is_valid_email('someone@gmail.com')
-is_valid_email('bill.gates@microsoft.com')
-is_valid_email('bob#example.com')
-is_valid_email('mr-bob@example.com')
+# is_valid_email('someone@gmail.com')
+# is_valid_email('bill.gates@microsoft.com')
+# is_valid_email('bob#example.com')
+# is_valid_email('mr-bob@example.com')
 
 
 # todo 提取出带名字的email地址
@@ -28,12 +28,13 @@ is_valid_email('mr-bob@example.com')
     bob@example.com => bob
 
  """
-re_name = re.compile(r'^(<.*?>)?(.*?)?\s*(.*?)@(\w+)(\.\w+)+')
+re_name = re.compile(r'(<.*?>)?\s*(.*?)@(\w+)(\.\w+)+')
 
 
 def name_of_email(addr):
     n = re_name.match(addr)
     print(n.groups())
+
     if n is None:
         return 'a'
     if n.group(1):
