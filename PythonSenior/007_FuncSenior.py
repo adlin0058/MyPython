@@ -39,7 +39,7 @@ from functools import reduce
 # def fn(x, y):
 #     return x*10+y
 
-# # 将 数字字符 转换为 数字
+# # todo 将 数字字符 转换为 数字
 
 
 # def char2num(s):
@@ -69,10 +69,24 @@ from functools import reduce
 # print(r4)
 
 
-# todo 将字符串变为英文名字格式
-def normalize(name):
-    return name.title()
+# # todo 将字符串变为英文名字格式
+# def normalize(name):
+#     return name.title()
 
 
-r1 = map(normalize, ['adam', 'LISA', 'barT'])
-print(list(r1))
+# r1 = map(normalize, ['adam', 'LISA', 'barT'])
+# print(list(r1))
+
+
+# todo 利用map和reduce，将字符串'123.456'转换为浮点数123.456
+
+
+def str2float(s):
+    s_int = s.split('.')[0]
+    s_float = '0.'+s.split('.')[1]
+    r = reduce(lambda x, y: x+y, map(float, [s_int, s_float]))
+    return r
+
+
+r = str2float('123.456')
+print(r)
