@@ -56,3 +56,6 @@ def is_palindrome(n):
 
 print(is_palindrome(121))
 print(is_palindrome(122))
+
+s1 = '12345'
+print(s1[::-1])
