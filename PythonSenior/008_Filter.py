@@ -20,31 +20,39 @@
 # print(l)
 
 
-# todo 用filter求素数
-# 构造一个从3开始的奇数序列，2以上的偶数不会是素数
-def _odd_iter():
-    n = 1
-    while True:
-        n = n + 2
-        yield n
+# # todo 用filter求素数
+# # 构造一个从3开始的奇数序列，2以上的偶数不会是素数
+# def _odd_iter():
+#     n = 1
+#     while True:
+#         n = n + 2
+#         yield n
 
 
-def _not_divisible(n):
-    return lambda x: x % n > 0
+# def _not_divisible(n):
+#     return lambda x: x % n > 0
 
 
-def primes():
-    yield 2
-    it = _odd_iter()
-    while True:
-        n = next(it)
-        yield n
-        it = filter(_not_divisible(n), it)
+# def primes():
+#     yield 2
+#     it = _odd_iter()
+#     while True:
+#         n = next(it)
+#         yield n
+#         it = filter(_not_divisible(n), it)
 
 
-# ? 打印1000以内的素数
-for n in primes():
-    if n < 1000:
-        print(n)
-    else:
-        break
+# # ? 打印1000以内的素数
+# for n in primes():
+#     if n < 1000:
+#         print(n)
+#     else:
+#         break
+
+# todo 利用filter筛选出回数
+def is_palindrome(n):
+    return str(n) == str(n)[::-1]
+
+
+print(is_palindrome(121))
+print(is_palindrome(122))
