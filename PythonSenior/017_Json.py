@@ -1,4 +1,8 @@
 
 import json
 d = dict(name='Bob',age=20,sorce=80)
-print(json.dumps(d))
+str = json.dumps(d)
+print(str)
+a = json.loads(str)
+
+print(a)
